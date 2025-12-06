@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+int N;
+cout << "Enter number of beverages: ";
+ cin >> N;
+string name;
+float price;
+int budgetCount = 0;
+float total = 0;
+
+for (int i = 1; i <= N; i++) {
+cout << "Enter beverage name: ";
+cin >> name;
+ cout << "Enter price: ";
+        cin >> price;
+
+        total += price;
+
+        if (price < 120) {
+            cout << "Tag: Budget Drink";
+            budgetCount++;
+        } else {
+            cout << "Tag: Regular Drink\n";
+    }
+    }
+cout << fixed << setprecision(2);
+cout << "Total sales: " << total ;
+cout << "Number of Budget Drinks: " << budgetCount;
+
+ return 0;
+}
